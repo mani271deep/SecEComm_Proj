@@ -12,6 +12,7 @@ const handler = async (req, res) => {
         if (!userId) {
             response = { status: 400, body: JSON.stringify({ message: `User doesn't exists !!` }) };
         } else {
+            console.log('Login: ' + username + ' : ' + userId);
             const APP_HOST = req.headers.host;
 
             const credentialRequestOptions = {
